@@ -1,6 +1,6 @@
-# 🚀 AWS Sandbox Lab – Scalable Cloud Infrastructure Deployment
+# 🚀 AWS – Scalable Cloud Infrastructure Deployment
 
-This lab project demonstrates the deployment of a scalable, secure, and highly available cloud infrastructure using a broad range of AWS services. It was completed in an AWS Academy Cloud Operations Sandbox environment, with a focus on hands-on learning and service integration.
+This project demonstrates the deployment of a scalable, secure, and highly available cloud infrastructure using a broad range of AWS services. It was completed in an AWS Academy Cloud Operations Sandbox environment, with a focus on hands-on learning and service integration.
 
 ---
 
@@ -16,7 +16,7 @@ This lab project demonstrates the deployment of a scalable, secure, and highly a
 
 ---
 
-## ⚙️ Lab Highlights
+## ⚙️ Highlights
 
 - ✅ Deployed multi-tier web architecture with auto scaling.
 - ✅ Integrated RDS and DynamoDB with Lambda triggers.
