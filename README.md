@@ -22,7 +22,7 @@ A highly available web application architecture using multiple AWS services:
 ## 🛠️ Architecture Diagram
 
 > 🖼 View visual architecture
-> AWS App Architecture.png
+> main/AWS App Architecture.png
 
 ---
 
