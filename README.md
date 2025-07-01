@@ -1,42 +1,129 @@
-# 🚀 AWS – Scalable Cloud Infrastructure Deployment
+# 🌐 AWS Scalable Web Infrastructure Project
 
-This project demonstrates the deployment of a scalable, secure, and highly available cloud infrastructure using a broad range of AWS services. It was completed in an AWS Academy Cloud Operations Sandbox environment, with a focus on hands-on learning and service integration.
-
----
-
-## 🔧 Core AWS Services Utilized
-
-- **EC2 + Auto Scaling + ELB** – Compute and load balancing for web app scalability.
-- **RDS (MySQL)** – Fully managed relational database setup with secure connectivity.
-- **DynamoDB + Lambda** – Serverless architecture for event-driven processing.
-- **S3 + Glacier + CloudFront** – Object storage, archival policies, and CDN integration.
-- **SNS + CloudWatch** – Real-time alerting and infrastructure monitoring.
-- **IAM + SSM + CloudTrail + KMS** – Security, auditing, and encrypted access management.
-- **Route 53** – Domain resolution and DNS routing.
+This project demonstrates a full-stack, production-grade **cloud architecture** on AWS — including high availability, scalability, automation, monitoring, and cost-optimization best practices.
 
 ---
 
-## ⚙️ Highlights
+## 📌 Project Overview
 
-- ✅ Deployed multi-tier web architecture with auto scaling.
-- ✅ Integrated RDS and DynamoDB with Lambda triggers.
-- ✅ Configured lifecycle rules from S3 to Glacier for cold storage.
-- ✅ Delivered static content globally using CloudFront.
-- ✅ Implemented real-time monitoring and alerting with CloudWatch and SNS.
-- ✅ Enabled secure access and audit trails via IAM, SSM, and CloudTrail.
-- ✅ Configured DNS resolution using Route 53.
-
----
-
-## 🎓 Key Skills Demonstrated
-
-- Infrastructure provisioning & automation  
-- Scalable application design on AWS  
-- Secure and cost-efficient cloud architecture  
-- Event-driven and serverless development  
-- Monitoring, logging, and resource optimization  
+A highly available web application architecture using multiple AWS services:
+- **2 EC2 Instances** with Apache (auto-scaled)
+- **Application Load Balancer**
+- **RDS (MySQL)** for relational data
+- **DynamoDB** with Lambda integration
+- **S3 + Glacier** for tiered storage
+- **CloudFront** for global content delivery
+- **SNS + Lambda** for event-based notifications
+- **CloudWatch + CloudTrail** for full observability
+- **Route 53** for DNS resolution
 
 ---
 
-## 📁 Repo Structure (Suggested)
+## 🛠️ Architecture Diagram
+
+> 🖼 View visual architecture
+> AWS App Architecture.png
+
+---
+
+## ⚙️ Step-by-Step Setup
+
+### 1. **Launch EC2 Instances**
+- Launch two `t2.micro` instances (Amazon Linux)
+- Install Apache on both
+- Generate SSH key pairs for secure access
+
+### 2. **Configure Load Balancer & Auto Scaling**
+- Set up an **Application Load Balancer**
+- Create an **Auto Scaling Group** linked to both EC2s
+
+### 3. **Relational Database: RDS**
+- Launch a **MySQL RDS** instance
+- Configure security groups for EC2-RDS connection
+
+### 4. **NoSQL: DynamoDB**
+- Create a table `UserActivity`
+- Insert & query test data
+
+### 5. **Lambda Integration**
+- Create a Lambda function triggered by **DynamoDB Streams**
+- Log processing and forward events to SNS
+
+### 6. **Storage & Archiving**
+- Upload files to **Amazon S3**
+- Set **lifecycle policy** to archive data to **Amazon Glacier**
+
+### 7. **Content Delivery with CloudFront**
+- Configure **CloudFront** to serve static content from S3
+
+### 8. **Notifications with SNS**
+- Create SNS topic
+- Subscribe Lambda for triggered notifications
+
+### 9. **Monitoring with CloudWatch**
+- Create **alarms**, **dashboards**, and **logs**
+- Monitor EC2, RDS, Lambda, etc.
+
+### 10. **Domain & DNS with Route 53**
+- Point custom DNS records to **ALB**
+
+### 11. **Audit & Logging with CloudTrail**
+- Enable CloudTrail to track user and resource activity
+
+---
+
+## 📸 Screenshots for Lab Verification
+
+- ✅ EC2 & ELB working
+- ✅ Auto Scaling triggers
+- ✅ RDS + EC2 connectivity
+- ✅ DynamoDB insert/query + Lambda logs
+- ✅ S3 data → Glacier transition
+- ✅ CloudFront serving S3 content
+- ✅ SNS triggered from Lambda
+- ✅ CloudWatch dashboards & alarms
+- ✅ Route 53 resolving to ALB
+- ✅ CloudTrail log entries
+
+---
+
+## 🔐 Security Practices
+
+- Use key pairs (`.pem`, `.ppk`) for SSH access  
+- Restrict inbound traffic via Security Groups  
+- Enable encryption for RDS and S3  
+- Enable IAM roles with least privilege  
+
+---
+
+## 🧠 Lessons Learned
+
+- ✅ Hands-on with real-world AWS services  
+- ✅ Built a resilient & cost-effective architecture  
+- ✅ Practiced automation, monitoring, and scaling  
+- ✅ Gained experience with Lambda, CloudFront, and CloudWatch  
+
+---
+
+## 📚 Tech Stack
+
+| Service        | Purpose                         |
+|----------------|----------------------------------|
+| EC2            | Web server hosting              |
+| ALB + ASG      | Load balancing & scalability    |
+| RDS (MySQL)    | Relational database             |
+| DynamoDB       | NoSQL data storage              |
+| Lambda         | Serverless processing           |
+| S3 + Glacier   | Object storage & archiving      |
+| CloudFront     | CDN for S3                      |
+| SNS            | Notifications                   |
+| CloudWatch     | Logs, metrics, and alarms       |
+| Route 53       | DNS management                  |
+| CloudTrail     | Auditing and activity tracking  |
+
+---
+
+## 🏁 Final Note
+
+This project showcases real-world AWS cloud skills suitable for DevOps, cloud engineers, and system architects. Feel free to fork, learn, or contribute!
 
